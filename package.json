@@ -10,10 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.3.8",
+    "lil-gui": "^0.19.2",
+    "pixelarticons": "^1.8.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "stats.js": "^0.17.0",
+    "tailwind-merge": "^2.4.0",
+    "three": "^0.166.1"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.24.7",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
@@ -25,5 +33,6 @@
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.6",
     "vite": "^5.3.4"
-  }
+  },
+  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
 }
