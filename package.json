@@ -12,7 +12,6 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.8",
-    "lil-gui": "^0.19.2",
     "pixelarticons": "^1.8.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

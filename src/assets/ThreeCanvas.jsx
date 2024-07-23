@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import * as THREE from 'three';
+import { Wireframe } from 'three/examples/jsm/Addons.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 const ThreeCanvas = () => {
@@ -68,6 +69,7 @@ const ThreeCanvas = () => {
 
       controls = new OrbitControls(camera, renderer.domElement);
       controls.enableDamping = true;
+      controls.enableZoom = false;
 
       window.addEventListener('resize', onWindowResize, false);
 
