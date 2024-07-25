@@ -20,8 +20,7 @@ const MainContent = () => {
           Design is expensive.
           <motion.span
             animate={{
-            opacity: [1, 0.5, 1],
-            color: ['#ff6699', '#66ccff', '#ff6699'], // Pulsating colors
+            color: ['#036bfc', '#56fc03', '#fc03c2'], // Pulsating colors
             }}
             transition={{
             duration: 2,
