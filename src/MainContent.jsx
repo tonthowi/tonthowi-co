@@ -13,7 +13,7 @@ const MainContent = () => {
   const scaleTransform = useTransform(scale, [0, 1], [1, 0.9])
 
   return (
-    <motion.div style={{ scale:scaleTransform }}>
+    <motion.div style={{ scale:scaleTransform }} className='min-h-screen'>
       <BlurFade delay={0.50} inView blur="10px">
       <div className='relative max-w-screen-md py-60 px-4 lg:px-8 z-10 justify-start'>
         <h1 className='text-6xl tracking-tight font-Display text-white font-semibold'>

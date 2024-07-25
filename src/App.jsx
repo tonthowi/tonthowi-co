@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div
-      className="min-h-dvh overflow-hidden"
+      className="overflow-hidden"
     >
       <ThreeCanvas />
       <MainContent />
