@@ -151,7 +151,9 @@ const ThreeCanvas = () => {
     };
   }, []);
 
-  return <div id="threejs-canvas" className="absolute inset-0 w-full h-full"></div>;
+  return (
+    <div id="threejs-canvas" className="fixed inset-0 w-full h-full" />
+  )
 };
 
 export default ThreeCanvas;

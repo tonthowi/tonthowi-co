@@ -1,41 +1,42 @@
-import ThreeCanvas from './assets//ThreeCanvas.jsx';
-import Button from './components/Button.jsx';
-import { motion } from "framer-motion";
+import Button from './components/Button.jsx'
+import { motion, useScroll, useSpring, useTransform } from "framer-motion"
+import BlurFade from "./lib/blur-fade"
+import DockMenu from './MenuDock.tsx'
 
 const MainContent = () => {
+  const { scrollYProgress } = useScroll()
+  const scale = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  })
+  const scaleTransform = useTransform(scale, [0, 1], [1, 0.9])
+
   return (
-    <div className='flex items-center justify-center mx-auto max-w-2xl py-32 sm:py-48 lg:py-80'>
-      <ThreeCanvas />
-      <div className='relative z-50 text-white flex flex-col items-center justify-center'>
-        <h1 className='text-4xl mb-6 font-Display text-white font-semibold sm:text-6xl'>Hello, Universe!</h1>
-        <Button
-          label="GitHub"
-          type="button"
-          href="https://github.com/tonthowi"
-          showIcon={true}
-        />
-      </div>
-      <div className='text-white font-Display font-normal text-xs z-50 absolute bottom-1'>
-        <p>
-          Created by
+    <motion.div style={{ scale:scaleTransform }}>
+      <BlurFade delay={0.50} inView blur="10px">
+      <div className='relative max-w-screen-md py-60 px-4 lg:px-8 z-10 justify-start'>
+        <h1 className='text-6xl tracking-tight font-Display text-white font-semibold'>
+          Design is expensive.
           <motion.span
-          animate={{
+            animate={{
             opacity: [1, 0.5, 1],
             color: ['#ff6699', '#66ccff', '#ff6699'], // Pulsating colors
-          }}
-          transition={{
+            }}
+            transition={{
             duration: 2,
             ease: 'easeInOut',
             repeat: Infinity,
-          }}
+            }}
           >
-          &nbsp;Tonthowi Al Ahyar&nbsp;
+            &nbsp;But poor design decisions are expensiver.
           </motion.span>
-          using React
-        </p>
+        </h1>
+        <DockMenu />
       </div>
-    </div>
-  );
-};
+      </BlurFade>
+    </motion.div>
+  )
+}
 
-export default MainContent;
+export default MainContent
