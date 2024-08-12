@@ -9,9 +9,7 @@ const MainContent = () => {
       <div className='flex flex-col lg:flex-row relative py-60 px-8 lg:px-16 z-10 justify-start'>
         <h1 className='text-6xl max-w-screen-md lg:text-7xl tracking-tight font-Display text-white font-semibold'>
           Design is expensive.
-          <span>
-            &nbsp;But poor design decision is expensiver.
-          </span>
+          But poor design decision is expensiver.
         </h1>
         <div className="mt-8 lg:mt-0">
           <img

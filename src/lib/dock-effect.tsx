@@ -18,7 +18,7 @@ const DEFAULT_MAGNIFICATION = 160; // Set the magnified hovered here
 const DEFAULT_DISTANCE = 140;
 
 const dockVariants = cva(
-  "w-max mt-8 h-[58px] p-2 flex gap- rounded-2xl border supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 backdrop-blur-md",
+  "w-max mt-8 h-[58px] p-2 flex rounded-2xl border supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 backdrop-blur-md",
 );
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
@@ -95,7 +95,7 @@ const DockIcon = ({
   let widthSync = useTransform(
     distanceCalc,
     [-distance, 0, distance],
-    [120, magnification, 120] // Set the default width here
+    [100, magnification, 100] // Set the default width here
   );
 
   let width = useSpring(widthSync, {
