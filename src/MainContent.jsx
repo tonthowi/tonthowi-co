@@ -16,7 +16,7 @@ const MainContent = () => {
         <div className="mt-8 lg:mt-0">
           <img
             alt="Funny GIFs about bad UX"
-            src="src/assets/confused-old-lady.webp"
+            src="/confused-old-lady.webp"
           />
         </div>
       </div>
