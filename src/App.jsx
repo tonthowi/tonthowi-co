@@ -1,4 +1,4 @@
-import ThreeCanvas from './components/ThreeCanvas.jsx'
+import DockMenu from './components/MenuDock.tsx'
 import MainContent from "./MainContent.jsx"
 import SecondaryContent from "./SecondaryContent.jsx"
 import Footer from "./components/Footer.jsx"
@@ -6,11 +6,10 @@ function App() {
 
   return (
     <div
-      className="overflow-hidden"
+      className="overflow-hidden bg-black"
     >
-      <ThreeCanvas />
+      <DockMenu />
       <MainContent />
-      {/* <SecondaryContent /> */}
       <Footer />
     </div>
   )

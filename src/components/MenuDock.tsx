@@ -1,9 +1,9 @@
 import React from "react";
-import { Dock, DockIcon } from "./lib/dock-effect";
-import Link from './components/Link.jsx';
-import GitHubIcon from './images/GitHubIcon.jsx';
-import NoteIcon from './images/NoteIcon.jsx';
-import LinkedinIcon from './images/LinkedinIcon.jsx';
+import { Dock, DockIcon } from "../lib/dock-effect";
+import Link from '../components/Link.jsx';
+import GitHubIcon from '../images/GitHubIcon.jsx';
+import NoteIcon from '../images/NoteIcon.jsx';
+import LinkedinIcon from '../images/LinkedinIcon.jsx';
 
 const MenuIcon = ({ href, icon: IconComponent, label, ...props }) => {
     return (
@@ -19,7 +19,7 @@ const MenuIcon = ({ href, icon: IconComponent, label, ...props }) => {
 
 export default function DockMenu() {
     return (
-        <div className="relative">
+        <div className='px-8 lg:px-16 justify-center fixed top-0 z-50'>
             <Dock direction="middle">
                 <DockIcon>
                     <MenuIcon href="https://github.com/tonthowi" icon={GitHubIcon} label="GitHub" />
