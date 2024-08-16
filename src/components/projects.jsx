@@ -10,10 +10,10 @@ const Projects = ({works}) =>{
             {works.map((work) => (
               <div key={work.id} className="group relative bg-black border border-white/15 overflow-hidden rounded-lg">
                   <a href={work.href}>
-                    <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden lg:aspect-none  lg:h-80">
+                    <div className="aspect-h-2 aspect-w-3 w-full overflow-hidden">
                       <Magnetic>
-                        <div className="magnetic-wrapper font-Display tracking-wider">
-                          <button className="magnetic-button">View</button>
+                        <div className="opacity-0 invisible transition-opacity duration-300 z-50 group-hover:opacity-100 group-hover:visible font-Display tracking-wider">
+                          <button className="w-24 h-24 rounded-full bg-black text-white flex items-center justify-center cursor-pointer absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">View</button>
                         </div>
                       </Magnetic>
                       <img
