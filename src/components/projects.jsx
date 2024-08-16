@@ -49,11 +49,11 @@ const Projects = ({ works }) => {
                     <p className="text-sm text-white/70 mt-6">
                       {work.description}
                     </p>
-                    <div className="flex flex-wrap space-x-1">
+                    <div className="flex flex-wrap gap-1 mt-6">
                       {work.tags.map((tag) => (
                         <span
                           key={tag.id}
-                          className="inline-flex items-center rounded-sm px-2 py-1 mt-6 text-xs font-medium text-white/70 ring-1 ring-inset ring-white/30"
+                          className="inline-flex items-center rounded-sm px-2 py-1 text-xs font-medium text-white/70 ring-1 ring-inset ring-white/30"
                         >
                           {tag.label}
                         </span>
