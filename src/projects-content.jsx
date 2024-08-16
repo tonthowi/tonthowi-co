@@ -1,43 +1,20 @@
 import Projects from "./components/projects"
 const ProjectsContent = () => {
     const works = [
-        {
-          id: 1,
-          name: 'Basic Tee',
-          href: '#',
-          imageSrc: '/giphy.webp',
-          imageAlt: "Front of men's Basic Tee in black.",
-          year: '2021 - 2024',
-          description: 'Eight shirts arranged on table in black, olive, grey, blue, white, red, mustard, and green.',
-          tags: [
-            { id: 'ux-design', label: 'UX Design' },
-            { id: 'rebranding', label: 'Rebranding' }           
-          ]
-        },
-        {
-            id: 2,
-            name: 'Basic Tee',
-            href: '#',
-            imageSrc: '/giphy.webp',
-            imageAlt: "Front of men's Basic Tee in black.",
-            year: '2021 - 2024',
-            description: 'Eight shirts arranged on table in black, olive, grey, blue, white, red, mustard, and green.',
-            tags: [
-                { id: 'ux-design', label: 'UX Design' },
-                { id: 'rebranding', label: 'Rebranding' }           
-              ]
-          },
           {
-            id: 3,
-            name: 'Basic Tee',
-            href: '#',
-            imageSrc: '/giphy.webp',
-            imageAlt: "Front of men's Basic Tee in black.",
+            id: 1,
+            name: 'Perfeqt App',
+            href: 'https:/perfeqt.co',
+            target: '_blank',
+            imageSrc: '/banner-video-revamp-mobile.mp4',
+            imageAlt: "Thumbnail of Perfeqt app video preview",
             year: '2021 - 2024',
-            description: 'Eight shirts arranged on table in black, olive, grey, blue, white, red, mustard, and green.',
+            description: "Designed an at-home wellness app with a personalized lifestyle plan, food recommendations, and customized supplements.",
             tags: [
-                { id: 'ux-design', label: 'UX Design' },
-                { id: 'rebranding', label: 'Rebranding' }           
+                { id: 'ux-research', label: 'UX Research' },
+                { id: 'ui-design', label: 'UI Design' },
+                { id: 'animation', label: 'Animation' },
+                { id: 'rebranding', label: 'Visual Branding' }           
               ]
           },
       ]
