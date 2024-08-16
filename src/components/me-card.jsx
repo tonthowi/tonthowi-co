@@ -1,5 +1,4 @@
 import SocialMenu from './social-menu.jsx';
-import Link from "./link.jsx";
 import ShineBorder from '../lib/shine-border.jsx';
 
 import GitHubIcon from '../images/GitHubIcon.jsx';
@@ -43,7 +42,7 @@ const MeCard = () => {
             <p>Driven by curiosity and a love for greatness, high-quality and thoughtful design. Pushing the boundaries and creating something truly unique and meaningful.
             </p>
             <p>
-            Currently working for <Link href="https://accelbyte.io" className="text-white/100 underline hover:text-blue-500 transition">AccelByte, Inc</Link>, exploring different side projects and learning more about front-end development.
+            Currently working for <a href="https://accelbyte.io" className="text-white/100 underline hover:text-blue-500 transition">AccelByte, Inc</a>, exploring different side projects and learning more about front-end development.
             </p>
           </div>        
           <SocialMenu socials={socials}/>

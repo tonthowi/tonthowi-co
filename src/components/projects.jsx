@@ -23,16 +23,16 @@ const Projects = ({works}) =>{
                       />
                     </div>
                                     <div className="flex justify-between">
-                    <div className="flex flex-1 flex-col space-y-2 p-4">
+                    <div className="flex flex-1 flex-col p-4">
                         <h3 className="text-lg font-semibold text-white">
                           <span aria-hidden="true" className="absolute inset-0" />
                           {work.name}
                         </h3>
                       <p className="text-xs text-white/70">{work.year}</p>
-                      <p className="text-sm text-white/70">{work.description}</p>
+                      <p className="text-sm text-white/70 mt-6">{work.description}</p>
                       <div className="flex flex-auto flex-row space-x-1">
                           {work.tags.map((tag) => (
-                          <span key={tag.id} className="inline-flex items-center rounded-md bg-green-500/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-500/20">{tag.label}</span>
+                          <span key={tag.id} className="inline-flex items-center rounded-sm px-2 py-1 mt-6 text-xs font-medium text-white/70 ring-1 ring-inset ring-white/30">{tag.label}</span>
                           ))}
                       </div>
                     </div>

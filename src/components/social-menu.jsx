@@ -1,14 +1,13 @@
-import Link from './link.jsx';
 
 const MenuIcon = ({ href, icon: IconComponent, label, ...props }) => {
     return (
-        <Link
+        <a
             className="flex items-center space-x-2 text-white hover:text-blue-500 transition"
             href={href}
         >
             <IconComponent className="w-5 h-5" {...props} />
             <span className="font-Display text-xs">{label}</span>
-        </Link>
+        </a>
     );
 };
 
