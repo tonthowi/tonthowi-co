@@ -4,7 +4,7 @@ const ProjectsContent = () => {
           {
             id: 1,
             name: 'Perfeqt App',
-            href: 'https:/perfeqt.co',
+            href: 'https://www.perfeqt.co',
             target: '_blank',
             imageSrc: '/banner-video-revamp-mobile.mp4',
             imageAlt: "Thumbnail of Perfeqt app video preview",

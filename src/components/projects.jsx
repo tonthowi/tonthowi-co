@@ -28,6 +28,8 @@ const Projects = ({ works }) => {
                       autoPlay
                       muted
                       loop
+                      playsInline
+                      controls={false}
                     />
                   ) : (
                     <img
@@ -47,7 +49,7 @@ const Projects = ({ works }) => {
                     <p className="text-sm text-white/70 mt-6">
                       {work.description}
                     </p>
-                    <div className="flex flex-auto flex-row space-x-1">
+                    <div className="flex flex-wrap space-x-1">
                       {work.tags.map((tag) => (
                         <span
                           key={tag.id}
