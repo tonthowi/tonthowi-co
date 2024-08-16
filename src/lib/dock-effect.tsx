@@ -6,6 +6,9 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 import { cn } from "./utils";
 
+// Utility function to check if the view is mobile
+const isMobile = () => typeof window !== "undefined" && window.innerWidth <= 768;
+
 export interface DockProps extends VariantProps<typeof dockVariants> {
   className?: string;
   magnification?: number;
@@ -33,14 +36,14 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
     },
     ref,
   ) => {
-    const mouseX = useMotionValue(Infinity);
+    const mouseX = useMotionValue(isMobile() ? Infinity : null);
 
     const renderChildren = () => {
       return React.Children.map(children, (child: any) => {
         return React.cloneElement(child, {
           mouseX: mouseX,
-          magnification: magnification,
-          distance: distance,
+          magnification: isMobile() ? 100 : magnification, // Disable magnification on mobile
+          distance: isMobile() ? 0 : distance, // Disable distance on mobile
         });
       });
     };
@@ -48,8 +51,8 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
     return (
       <motion.div
         ref={ref}
-        onMouseMove={(e) => mouseX.set(e.pageX)}
-        onMouseLeave={() => mouseX.set(Infinity)}
+        onMouseMove={(e) => !isMobile() && mouseX.set(e.pageX)}
+        onMouseLeave={() => !isMobile() && mouseX.set(Infinity)}
         {...props}
         className={cn(dockVariants({ className }), {
           "items-start": direction === "top",
@@ -103,6 +106,11 @@ const DockIcon = ({
     stiffness: 150,
     damping: 12,
   });
+
+  if (isMobile()) {
+    // Disable the animation on mobile
+    width = 100;
+  }
 
   return (
     <motion.div
