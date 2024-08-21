@@ -2,9 +2,11 @@ import Magnetic from "../lib/magnetic"
 
 const Projects = ({ works }) => {
   return (
-    <div>
-      <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-5xl">
-        <h2 className="text-3xl font-bold text-white">Check out my work</h2>
+      <div className="mx-auto max-w-2xl py-8 sm:py-16 px-8 lg:px-4 lg:max-w-5xl">
+        <div className="flex flex-col lg:flex-row mb-6 text-4xl font-bold gap-0 lg:gap-2">
+          <h2 className=" text-white">Check out my work</h2>
+          <span className="text-white/30">selected only</span>
+        </div>
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-8">
           {works.map((work) => (
             <div
@@ -66,7 +68,6 @@ const Projects = ({ works }) => {
           ))}
         </div>
       </div>
-    </div>
   );
 };
 

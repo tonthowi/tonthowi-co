@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion'
 
-const Footer = () => {
+const Footer = ({ className, staticText, pulsedText }) => {
 
     return(
-        <div className='px-8 lg:px-16 text-white font-Display font-normal text-xs z-50 fixed bottom-1'>
+        <div className={`flex px-8 lg:px-16 text-white font-Display font-normal text-xs z-50 relative bottom-1 ${className}`}>
             <p>
-                Designed and developed by
+                {staticText}
                 <motion.span
                     animate={{
                     opacity: [1, 0.5, 1],
@@ -17,7 +17,7 @@ const Footer = () => {
                     repeat: Infinity,
                     }}
                 >
-                    &nbsp;Tonthowi Al Ahyar&nbsp;
+                    &nbsp;{pulsedText}&nbsp;
                 </motion.span>
             </p>
         </div>

@@ -26,7 +26,7 @@ export default function RetroGrid({ className }) {
       </div>
 
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#030712]/80 to-transparent to-90%" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#030712] to-transparent to-40%" />
     </div>
   );
 }

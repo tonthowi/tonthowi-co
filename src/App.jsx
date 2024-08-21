@@ -7,7 +7,7 @@ import Footer from "./components/Footer.jsx";
 function App() {
 
   return (
-    <div className="overflow-hidden mx-auto font-Display text-white relative px-8 lg:px-16">
+    <div className="overflow-hidden mx-auto font-Display text-white relative">
 
       <motion.div className="relative z-10">
         <BlurFade delay={0.50} inView blur="10px">
@@ -21,7 +21,11 @@ function App() {
         </BlurFade>
       </motion.div>
 
-      <Footer />
+      <Footer
+        className="justify-center items-center"
+        staticText="Designed and developed by"
+        pulsedText="Tonthowi Al Ahyar"
+      />
     </div>
   );
 }
